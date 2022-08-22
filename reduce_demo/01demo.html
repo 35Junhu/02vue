@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 利用reduce 求 1-100的和 -->
+    <script>
+      //reduce是数组方法，先创建一个数组
+      let arr = [];
+      let n = 1;
+      for (let i = 0; i < 100; i++) {
+        arr.push(n);
+        n++;
+      }
+      //console.log(arr);
+      let sum = arr.reduce((prev, cur) => {
+        return total + cur;
+      }, 0);
+      console.log(sum);
+    </script>
+  </body>
+</html>

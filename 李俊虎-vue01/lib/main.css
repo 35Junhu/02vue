@@ -1,0 +1,15 @@
+.banner {
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+}
+
+body {
+    background: green;
+  }
+.tabs {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+

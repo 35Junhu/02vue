@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 封装一个函数, 利用reduce处理http://www.baidu.com/?name=zhangsan&age=18&sex=nan# -->
+    <!-- 要求返回一个对象,输出的结果 : { name:"zhangsan",age:18,sex:nan } -->
+    <script>
+       let = url = "http://www.baidu.com/?name=zhangsan&age=18&sex=nan#";
+       const parse = (url) => {
+         //先把我们要的字符串截取出来
+         let arr = [];
+         //截取出想要的字符串，再把他转成数组，后用reduce遍历成对象，定义截取范围
+         url = url.slice(url.indexOf("?") + 1, url.indexOf("#"));
+         // console.log(url);
+         arr = url.split("&");
+         // console.log(arr);
+         return arr.reduce((prev, cur) => {
+           let [key, value] = cur.split("=");
+           prev[key] = value;
+           return prev;
+         }, {});
+       };
+      console.log( parse(url));
+    </script>
+  </body>
+</html>
